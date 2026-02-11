@@ -1,3 +1,4 @@
 {
+	"ignorePaths": ["pnpm-lock.yaml"],
 	"words": ["kxphotographer"]
 }
