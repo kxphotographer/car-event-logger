@@ -19,6 +19,8 @@ importers:
         specifier: ^9.6.4
         version: 9.6.4
 
+  packages/domain: {}
+
 packages:
 
   '@biomejs/biome@2.3.14':
