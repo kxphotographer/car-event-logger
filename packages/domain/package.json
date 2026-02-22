@@ -1,13 +1,13 @@
 {
-    "private": true,
-    "name": "@kxphotographer/car-event-logger-domain",
-    "version": "0.0.1",
-    "scripts": {
-        "build": "tsup ./src"
-    },
-    "devDependencies": {
-        "@kxphotographer/car-event-logger-config-base": "workspace:*",
-        "tsup": "^8.5.1",
-        "typescript": "^5.9.3"
-    }
+	"private": true,
+	"name": "@kxphotographer/car-event-logger-domain",
+	"version": "0.0.1",
+	"scripts": {
+		"build": "tsup ./src"
+	},
+	"devDependencies": {
+		"@kxphotographer/car-event-logger-config-base": "workspace:*",
+		"tsup": "^8.5.1",
+		"typescript": "^5.9.3"
+	}
 }

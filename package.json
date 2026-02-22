@@ -9,7 +9,7 @@
 		"check:biome": "biome check ./",
 		"check:cspell": "cspell ./",
 		"format": "run-p --continue-on-error --aggregate-output format:*",
-    "format:biome": "biome lint ./ --write"
+		"format:biome": "biome check ./ --write"
 	},
 	"packageManager": "pnpm@10.11.0",
 	"devDependencies": {
