@@ -1,0 +1,20 @@
+{
+	"extends": [
+		"@kxphotographer/car-event-logger-config-base/tsconfig.json",
+		"@tsconfig/node22/tsconfig.json"
+	],
+	"compilerOptions": {
+		"lib": ["esnext"],
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"sourceMap": true
+	},
+	"include": ["./src/**/*.ts"],
+	"references": [
+		{
+			"path": "../../packages/domain"
+		}
+	]
+}

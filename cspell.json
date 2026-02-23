@@ -1,0 +1,4 @@
+{
+	"ignorePaths": ["*.tsbuildinfo", "dist", "pnpm-lock.yaml"],
+	"words": ["kxphotographer"]
+}
