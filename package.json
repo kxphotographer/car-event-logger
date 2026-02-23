@@ -5,9 +5,11 @@
 	"author": "kxphotographer <kxphotographer@users.noreply.github.com>",
 	"license": "MIT",
 	"scripts": {
+		"build": "pnpm --recursive build",
 		"check": "run-p --continue-on-error --aggregate-output check:*",
 		"check:biome": "biome check ./",
 		"check:cspell": "cspell ./",
+		"clean": "pnpm --recursive --reverse clean",
 		"format": "run-p --continue-on-error --aggregate-output format:*",
 		"format:biome": "biome check ./ --write"
 	},

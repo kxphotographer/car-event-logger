@@ -1,1 +1,1 @@
-export {};
+export * as math from "./math";

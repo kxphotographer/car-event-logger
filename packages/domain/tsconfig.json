@@ -4,6 +4,7 @@
 		"composite": true,
 		"declaration": true,
 		"declarationMap": true,
+		"lib": ["esnext"],
 		"module": "esnext",
 		"moduleResolution": "bundler",
 		"outDir": "./dist",
