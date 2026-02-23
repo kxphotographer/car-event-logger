@@ -7,8 +7,6 @@
 	"scripts": {
 		"build": "run-p --continue-on-error --aggregate-output build:*",
 		"build:tsup": "tsup",
-		"check": "run-p --continue-on-error --aggregate-output check:*",
-		"check:typescript": "tsc --noEmit",
 		"clean": "rimraf ./dist",
 		"start": "node --enable-source-maps ."
 	},
