@@ -1,59 +1,98 @@
-# Car event logger project
+# Car Event Logger
 
-This is a project for following 2 purposes:
+A monorepo project that serves two purposes:
 
-1. To store and manage car event data: odometer readings, fueling, maintenances, services, etc.
-2. To study and share the software development architecture and patterns.
+1. **Car event management** — Store and manage vehicle data: odometer readings, fueling, maintenance, services, and related events.
+2. **Architecture and patterns** — Explore and share software development architecture and patterns (layered architecture, Domain-Driven Design) through a concrete codebase.
 
-## Detail about 1
+---
 
-I have a SUBARU SAMBAR which has already discontinued as an in-house manufactured car by former Fuji Heavy Industries (nowadays SUBARU corporation) in 2012, and I had been longing for this car since I took my driver's license in 2015, because of its unique characteristics compared to other Kei cars that day, and even now.
+## Purpose 1: Car Event Management
 
-To drive this car as long as possible, I want to manage any kind of information about this car. This project is mainly for this purpose.
+### Background
 
-This application records and manages the following information:
-- Vehicle information
-- Odometer readings
-- Events
-    - Fueling
-    - Checks
-        - Parts replacement histories may be linked
-    - Maintenances and services
-        - Parts replacement histories may be linked
-    - Parts and chemicals w/ numbers of genuine or third party parts, standard replacement intervals, etc.
-    - Parts and chemicals replacements and their replacement intervals (how many kilometers or how many days after the last replacement)
-    - Notes
-    - Other
+I own a **Subaru Sambar**, which was discontinued as an in-house model by Fuji Heavy Industries (now Subaru Corporation) in 2012. I had wanted this car since getting my driver’s license in 2015 because of its unique characteristics compared to other Kei cars at the time—and that still holds today.
 
-Based on the data above, the application also provides the following features:
+To keep this car on the road as long as possible, I want to manage all relevant information about it. This project exists primarily for that purpose.
 
-- Fuel efficiency calculation
-- Check and parts replacement reminders
-- Issue URL for sharing service history records
+### Data the application records and manages
 
-## Detail about 2
+- **Vehicle information**
+- **Odometer readings**
+- **Events**
+  - Fueling
+  - Checks (parts replacement history can be linked)
+  - Maintenance and services (parts replacement history can be linked)
+  - Parts and chemicals: part numbers (genuine or third-party), standard replacement intervals, etc.
+  - Parts and chemicals replacements and their intervals (by distance or time since last replacement)
+  - Notes
+  - Other
 
-Putting aside the main purpose mentioned above, I also want to study and think about how I can apply architecture and patterns to software development through this project.
+### Features (planned or in progress)
 
-This project mainly applies the following architecture and patterns:
+Based on the data above, the application aims to provide:
 
-### Layered Architecture
+- **Fuel efficiency calculation**
+- **Check and parts replacement reminders**
+- **Shareable service history** — e.g. issue URLs for sharing service records
 
-This codebase consists of the following layers:
+---
 
-- Domain layer
-    - Contains the core business logic including data definitions and rules
-- Application layer
-    - Contains the application services and use cases to orchestrate the domain layer and infrastructure layer
-- Infrastructure layer
-    - Contains the data access and external service integrations
-- Presentation layer
-    - Provides the user interface and presentation logic
+## Purpose 2: Architecture and Patterns
+
+In addition to the main goal above, this project is used to explore how to apply architecture and patterns in software development.
+
+### Layered architecture
+
+The codebase is organized into the following layers:
+
+| Layer           | Role |
+|----------------|------|
+| **Domain**     | Core business logic: data definitions, rules, and domain models. |
+| **Application**| Application services and use cases; orchestrates the domain and infrastructure layers. |
+| **Infrastructure** | Data access and integrations with external services. |
+| **Presentation**   | User interface and presentation logic. |
 
 ### Domain-Driven Design
 
-This codebase applies the following Domain-Driven Design patterns:
+The following DDD patterns are applied:
 
-- Entity
-- Value Object
-- Aggregate
+- **Entity** — Objects with identity that persist over time.
+- **Value Object** — Immutable objects defined by their attributes.
+- **Aggregate** — Clusters of entities and value objects with a single root and consistency boundaries.
+
+---
+
+## Project structure
+
+This repository is a **pnpm monorepo**:
+
+- **`apps/`** — Applications (e.g. CLI, example apps).
+- **`packages/`** — Shared packages (e.g. `domain`, `config-base`).
+
+### Prerequisites
+
+- **Node.js** 22 (or compatible)
+- **pnpm** 10.x (see `packageManager` in root `package.json`)
+
+### Scripts (root)
+
+| Command       | Description |
+|---------------|-------------|
+| `pnpm install`| Install dependencies for the whole monorepo. |
+| `pnpm build`  | Build all packages and apps. |
+| `pnpm test`   | Run tests (Vitest). |
+| `pnpm check`  | Run lint, spell-check, and package-level checks. |
+| `pnpm clean`  | Clean build artifacts (reverse order). |
+
+### Development
+
+1. Clone the repository and run `pnpm install`.
+2. Use `pnpm build` to verify the build, and `pnpm test` to run tests.
+3. CI runs on push (see `.github/workflows/check.yml`) for build, check, and test.
+
+---
+
+## License
+
+MIT
