@@ -9,7 +9,7 @@
 		"check": "run-p --continue-on-error --aggregate-output check:*",
 		"check:biome": "biome check ./",
 		"check:cspell": "cspell ./",
-		"check:subpackages": "pnpm --recursive --filter=@kxphotographer/car-event-logger-packages-* build && pnpm --recursive check",
+		"check:subpackages": "pnpm --recursive --filter=@kxphotographer/car-event-logger-packages-* build && pnpm --recursive --aggregate-output --reporter-hide-prefix check",
 		"clean": "pnpm --recursive --reverse clean",
 		"format": "run-p --continue-on-error --aggregate-output format:*",
 		"format:biome": "biome check ./ --write",
