@@ -5,4 +5,5 @@ export default defineConfig({
 	format: ["cjs", "esm"],
 	sourcemap: true,
 	target: "esnext",
+	tsconfig: "tsconfig.build.json",
 });

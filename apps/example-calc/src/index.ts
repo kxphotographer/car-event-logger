@@ -1,6 +1,6 @@
 import { stdin, stdout } from "node:process";
 import * as readline from "node:readline/promises";
-import { math } from "@kxphotographer/car-event-logger-domain";
+import { math } from "@kxphotographer/car-event-logger-packages-domain";
 
 const rl = readline.createInterface({ input: stdin, output: stdout });
 

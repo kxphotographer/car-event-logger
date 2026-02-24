@@ -1,5 +1,7 @@
 {
-	"extends": ["@kxphotographer/car-event-logger-config-base/tsconfig.json"],
+	"extends": [
+		"@kxphotographer/car-event-logger-packages-config-base/tsconfig.json"
+	],
 	"compilerOptions": {
 		"composite": true,
 		"declaration": true,

@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "@kxphotographer/car-event-logger-config-base",
+	"name": "@kxphotographer/car-event-logger-packages-config-base",
 	"version": "0.0.1",
 	"devDependencies": {
 		"@tsconfig/node22": "^22.0.5",
