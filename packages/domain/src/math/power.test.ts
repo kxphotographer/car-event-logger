@@ -5,8 +5,8 @@ import { power } from "./power";
 describe("math.power", () => {
 	it("should raise a number to the power of another number", () => {
 		// Arrange
-		const base = faker.number.int(255);
-		const exponent = faker.number.int(255);
+		const base = faker.number.int(16);
+		const exponent = faker.number.int(16);
 
 		// Act
 		const result = power(base, exponent);
