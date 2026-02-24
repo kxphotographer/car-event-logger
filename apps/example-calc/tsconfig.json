@@ -1,6 +1,6 @@
 {
 	"extends": [
-		"@kxphotographer/car-event-logger-config-base/tsconfig.json",
+		"@kxphotographer/car-event-logger-packages-config-base/tsconfig.json",
 		"@tsconfig/node22/tsconfig.json"
 	],
 	"compilerOptions": {

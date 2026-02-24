@@ -1,14 +1,15 @@
 {
 	"private": true,
-	"name": "@kxphotographer/car-event-logger",
+	"name": "@kxphotographer/car-event-logger-root",
 	"version": "0.0.1",
 	"author": "kxphotographer <kxphotographer@users.noreply.github.com>",
 	"license": "MIT",
 	"scripts": {
 		"build": "pnpm --recursive build",
-		"check": "run-p --continue-on-error --aggregate-output check:* && pnpm --recursive check",
+		"check": "run-p --continue-on-error --aggregate-output check:*",
 		"check:biome": "biome check ./",
 		"check:cspell": "cspell ./",
+		"check:subpackages": "pnpm --recursive --filter=@kxphotographer/car-event-logger-packages-* build && pnpm --recursive check",
 		"clean": "pnpm --recursive --reverse clean",
 		"format": "run-p --continue-on-error --aggregate-output format:*",
 		"format:biome": "biome check ./ --write",
